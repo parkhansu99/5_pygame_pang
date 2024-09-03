@@ -248,6 +248,9 @@ while running: # 게임이 진행중인 동안
                         "init_spd_y" : ball_speed_y[ball_img_idx + 1], # 속도는 기존보다 느리게 설정
                     })
                 break
+        else : # 계속 게임을 진행
+            continue # 안쪽 for 문 조건이 맞지 않으면 continue, 바깥쪽 for 문 계속 수행
+        break # 안쪽 for문의 break를 거치면 진입 가능, 2중 for 문을 한번에 탈출
 
     # 충돌된 공 or 무기 없애기
     if ball_to_remove > -1: # 공이 충돌한 경우 (볼 인덱스 값으로 변경되어 -1보다 큰 상황임)
